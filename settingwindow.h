@@ -1,0 +1,4 @@
+#ifndef SETTINGWINDOW_H
+#define SETTINGWINDOW_H
+
+#endif // SETTINGWINDOW_H

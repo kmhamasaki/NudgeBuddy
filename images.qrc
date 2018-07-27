@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>annoyed.png</file>
+        <file>chill.png</file>
+        <file>content.png</file>
+        <file>down.png</file>
+        <file>frustrated.png</file>
+        <file>mad.png</file>
+        <file>nervous.png</file>
+        <file>sad.png</file>
+        <file>sick.png</file>
+        <file>surprised.png</file>
+        <file>tired.png</file>
+        <file>unsure.png</file>
+        <file>upset.png</file>
+    </qresource>
+</RCC>
