@@ -44,6 +44,7 @@ private:
     QLabel* tired;
     QLabel* upset;
 QLayout *layout;
+QLabel* text;
     QLayout* emojimain;
     QHash<int, QPair<QLabel*, QString>> emoji_map;
 };

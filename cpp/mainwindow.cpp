@@ -12,6 +12,9 @@
 #include <QRectF>
 #include <QBitmap>
 #include <QIcon>
+#include <QChar>
+
+
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -71,9 +74,8 @@ void MainWindow::init()
         emojimain->addWidget(emoji_map[i].first);
     }
 
-    QLabel* chill2 = new QLabel;
-    chill2->setText("Relaxed");
-    chill2->setAlignment(Qt::AlignCenter);
+    text = new QLabel;
+    text->setText("Relaxed");
 
     QLayout* Buttons = new QHBoxLayout;
     Buttons->setAlignment(Qt::AlignCenter);
@@ -100,8 +102,9 @@ void MainWindow::init()
 
     Buttons->addWidget(right_tri);
 
-    layout->addWidget(chill2);
+    layout->addWidget(text);
     layout->addItem(emojimain);
+    layout->setAlignment(text, Qt::AlignCenter);
     //layout->addWidget(slider);
     layout->addItem(Buttons);
     //layout->addChildLayout(emojimain);
@@ -116,21 +119,28 @@ void MainWindow::left_click()
     emoji_map[current].first->setPixmap( emoji_map[current].first->pixmap()->scaled(QSize(20,20), Qt::IgnoreAspectRatio, Qt::SmoothTransformation) );
     current--;
     emoji_map[current].first->setPixmap(QPixmap(":/images/images/" + emoji_map[current].second + ".png"));
-    emojimain->update();
+    emojimain->setContentsMargins(325 - 25*current, 20, -25 + 25*current, 20);
 
+    QString temp = emoji_map[current].second;
+    temp[0] = temp[0].toUpper();
+    text->setText(temp);
 }
 
 void MainWindow::right_click()
 {
     if(current == 13) return;
 
-    qDebug() << "right click";
     emoji_map[current].first->setPixmap( emoji_map[current].first->pixmap()->scaled(QSize(20,20), Qt::IgnoreAspectRatio, Qt::SmoothTransformation) );
     current++;
     emoji_map[current].first->setPixmap(QPixmap(":/images/images/" + emoji_map[current].second + ".png"));
+    emojimain->setContentsMargins(325 - 25*current, 20, -25 + 25*current, 20);
 
+    QString temp = emoji_map[current].second;
+    temp[0] = temp[0].toUpper();
+    text->clear();
+    text->setText(temp);
+    text->setAlignment(Qt::AlignCenter);
 
-    emojimain->update();
 
 }
 
