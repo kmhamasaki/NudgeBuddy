@@ -5,6 +5,9 @@
 #include <QPushButton>
 #include <QLabel>
 #include <QLayout>
+#include <QHash>
+#include <QPair>
+
 namespace Ui {
 class MainWindow;
 }
@@ -19,11 +22,13 @@ public:
     void init();
 
 private slots:
-    void buttonone();
+    void left_click();
+    void right_click();
     void on_pushButton_2_released();
     void sliderr(int c);
 
 private:
+    int current = 1;
     QWidget* window;
     QLabel* chill;
     QLabel* annoyed;
@@ -38,8 +43,9 @@ private:
     QLabel* surprised;
     QLabel* tired;
     QLabel* upset;
-
+QLayout *layout;
     QLayout* emojimain;
+    QHash<int, QPair<QLabel*, QString>> emoji_map;
 };
 
 #endif // MAINWINDOW_H

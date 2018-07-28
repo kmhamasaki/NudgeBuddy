@@ -23,20 +23,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
-    settingwindow.cpp \
-    moodstore.cpp \
-    action.cpp
+        cpp/main.cpp \
+        cpp/mainwindow.cpp \
+    cpp/settingwindow.cpp \
+    cpp/moodstore.cpp \
+    cpp/action.cpp
 
-HEADERS += \
-        mainwindow.h \
-    settingwindow.h \
-    moodstore.h \
-    action.h
+HEADERS +=  \
+        hdrs/mainwindow.h \
+    hdrs/settingwindow.h \
+    hdrs/moodstore.h \
+    hdrs/action.h
 
 FORMS += \
-    settingwindow.ui
+    ui/settingwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
