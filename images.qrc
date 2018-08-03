@@ -15,5 +15,6 @@
         <file>images/upset.png</file>
         <file>images/right_tri.png</file>
         <file>images/left_tri.png</file>
+        <file>images/check.png</file>
     </qresource>
 </RCC>

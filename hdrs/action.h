@@ -31,10 +31,7 @@ class other : public Action
     void getaction();
 };
 
-class todolist : public Action
-{
-    void getaction();
-};
+
 
 class meditate : public Action
 {

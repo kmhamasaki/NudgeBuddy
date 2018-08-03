@@ -1,5 +1,5 @@
 #include "hdrs/mainwindow.h"
-#include "ui_mainwindow.h"
+#include "todo.h"
 #include <QDesktopServices>
 #include <QUrl>
 #include <QApplication>
@@ -13,6 +13,7 @@
 #include <QBitmap>
 #include <QIcon>
 #include <QChar>
+#include <QSlider>
 
 
 
@@ -100,6 +101,17 @@ void MainWindow::init()
     right_tri->setFixedSize(QSize(45,45));
     connect(right_tri, SIGNAL (pressed()),this, SLOT (right_click()));
 
+
+
+    QPushButton* select = new QPushButton;
+    QPixmap spixmap(":/images/images/check.png");
+    rtpixmap = spixmap.scaled(QSize(30,30), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    QIcon ButtonIcon3(spixmap);
+    select->setIcon(ButtonIcon3);
+    select->setIconSize(QSize(30,30));
+    select->setFixedSize(QSize(45,45));
+    connect(select, SIGNAL (pressed()),this, SLOT (select()));
+    Buttons->addWidget(select);
     Buttons->addWidget(right_tri);
 
     layout->addWidget(text);
@@ -144,6 +156,11 @@ void MainWindow::right_click()
 
 }
 
+void MainWindow::select()
+{
+    QWidget* temp = new todo;
+    temp->show();
+}
 //    QDesktopServices::openUrl(QUrl("https://www.youtube.com/", QUrl::TolerantMode));
 
 void MainWindow::on_pushButton_2_released()

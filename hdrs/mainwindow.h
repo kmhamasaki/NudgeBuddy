@@ -24,10 +24,11 @@ public:
 private slots:
     void left_click();
     void right_click();
+    void select();
     void on_pushButton_2_released();
     void sliderr(int c);
 
-private:
+   protected:
     int current = 1;
     QWidget* window;
     QLabel* chill;

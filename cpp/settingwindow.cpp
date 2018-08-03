@@ -1,5 +1,4 @@
-#include "settingwindow.h"
-#include "ui_mainwindow.h"
+#include "hdrs/settingwindow.h"
 #include <QDesktopServices>
 #include <QUrl>
 

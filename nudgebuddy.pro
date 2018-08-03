@@ -25,18 +25,21 @@ CONFIG += c++11
 SOURCES += \
         cpp/main.cpp \
         cpp/mainwindow.cpp \
-    cpp/settingwindow.cpp \
     cpp/moodstore.cpp \
-    cpp/action.cpp
+    cpp/action.cpp \
+    procon.cpp \
+    todo.cpp
 
 HEADERS +=  \
         hdrs/mainwindow.h \
-    hdrs/settingwindow.h \
     hdrs/moodstore.h \
-    hdrs/action.h
+    hdrs/action.h \
+    procon.h \
+    todo.h
 
 FORMS += \
-    ui/settingwindow.ui
+    procon.ui \
+    todo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

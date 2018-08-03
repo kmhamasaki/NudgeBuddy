@@ -15,8 +15,7 @@ void text::getaction(){}
 void other::getaction(){}
 //other::~other(){}
 
-void todolist::getaction(){}
-//todolist::~todolist(){}
+
 
 void meditate::getaction(){}
 //meditate::~meditate(){}
