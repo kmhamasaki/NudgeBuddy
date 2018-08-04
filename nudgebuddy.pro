@@ -28,18 +28,24 @@ SOURCES += \
     cpp/moodstore.cpp \
     cpp/action.cpp \
     procon.cpp \
-    todo.cpp
+    todo.cpp \
+    journal.cpp \
+    gratitude.cpp
 
 HEADERS +=  \
         hdrs/mainwindow.h \
     hdrs/moodstore.h \
     hdrs/action.h \
     procon.h \
-    todo.h
+    todo.h \
+    journal.h \
+    gratitude.h
 
 FORMS += \
     procon.ui \
-    todo.ui
+    todo.ui \
+    journal.ui \
+    gratitude.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
